@@ -2,11 +2,42 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>Studio Ghibli</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <h1>STUDIO GHIBLI</h1>
+      <nav>
+        <ul>
+          <li>About</li>
+          <li>Filmography</li>
+          <li>Characters</li>
+          <li>More Details</li>
+        </ul>
+      </nav>
+      <img src="img.jpg">
+    </header>
+    <main>
+      <div class="filters">
+        <button>A-Z</button>
+        <input type="search" id="search" placeholder="search">
+        <select class="filter">
+          <option >All</option>
+          <option value="Goro Miyazaki">Goro Miyazaki</option>
+          <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+          <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+        </select>
+        <select class="year">
+          <option>All</option>
+          <option value="1986">1986</option>
+          <option value="1988">1988</option>
+          <option value="1989">1989</option>
+        </select>
+        </div>
+    </main>
     <script src="main.js" type="module"></script>
+    <!-- <script src="data/ghibli/ghibli.json"></script> -->
+    <footer></footer>
   </body>
 </html>
