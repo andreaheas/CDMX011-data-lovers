@@ -1,8 +1,12 @@
+html, body {
+  font-family:  arial;
+}
+
 img {
   position: absolute;
-  width: 200px;
-  top: 250px;
-  left: 100px;;
+  width: 260px;
+  top: 120px;
+  left: 80px;;
 }
 
 li {
@@ -23,6 +27,7 @@ h1 {
   position: absolute;
   left: 50px;
   font-size: 40px;
+  background: #19D8F0;
 }
 
 section {
@@ -35,4 +40,64 @@ section {
   position: absolute;
   top: 150px;
   left: 50px;
+}
+
+
+.posterFilm {
+  position: relative;
+  right: 300px;
+  padding: 120px;
+  left: 20px;
+}
+
+.filmDiv { 
+  position: relative;
+  top: 450px;
+  left: 400px;
+  padding: 120px;
+}
+
+.titleFilm {
+  top: 200px;
+ }
+
+ .imgPoster {
+   position: relative;
+   left: 300px;
+   top: 200px;
+   width: 200px;
+ }
+
+ .filter {
+   position: absolute;
+   left: 560px;
+   top: 100px;
+   padding: 0;
+ }
+
+ .filter2 {
+  position: absolute;
+  left: 800px;
+  top: 100px;
+  padding: 0;
+ }
+
+.titleFilm {
+  position: relative;
+  top: 415px;
+  left: 550px;
+  /* padding: 200px; */
+}
+
+.description {
+  position: relative;
+  top: 440px;
+  left: 550px;
+  width: 500px;
+}
+
+.director {
+  position: relative;
+  top: 425px;
+  left: 550px;
 }
