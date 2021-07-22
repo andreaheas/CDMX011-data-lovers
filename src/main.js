@@ -73,6 +73,13 @@ filmSelect.addEventListener("change", function() {
 //"Hayao Miyazaki" => "hayao_miyazaki" //id
 
 //Construye a todos los directores con sus peliculas en hash(objetos)
+//Ejemplo de la estructura que se hara en directorHash abajo
+// { 
+//   "hayao_miyazaki": {
+//     "name_director": "Hayao Miyazaki",
+//     "id_films": ["2baf70d1-42bb-4437-b551-e5fed5a87abe", "58611129-2dbc-4a81-a72f-77ddfc1b1b49"]
+//   }
+// } 
 function getIdDirectors(films) {
   let directorsHash = {};
 
@@ -86,19 +93,10 @@ function getIdDirectors(films) {
       directorsHash[keyDirector]['id_films'] =  []; //tiene que ser un array para poder guardar mas ids
       directorsHash[keyDirector]['id_films'].push(film.id);
       
-      // { //asigno nuevo key al directorHash
-      //   name_director: film.director,
-      //   id_films: [film.id]
-      // }
     }else{
       //este paso sucede cuando ya se le ha creado una key al director y se necesita agregar un nuevo id de pelicula al mismo director en id_films
       directorsHash[keyDirector]['id_films'].push(film.id); //esto sucede cuando el director tiene mas de una pelicula
     }
-
-    // let option = document.createElement('option'); //por cada array recorrido se crea una opcion
-    // option.text = idDirectors.director; //text es lo que el usuario ve
-    // option.value = idDirectors.id; // value, por medio de que valor se evalua el texto. Por id
-    // directors.appendChild(option);//creamos las opciones y se las agregamos al padre select
   });
   return directorsHash;
 }
@@ -132,8 +130,6 @@ directors.addEventListener("change", function() {
   let html = "";
   let idDirectorFilms = allDirectors[idDirector].id_films; //todos los id de sus peliculas
   
-  // console.log(allDirectors[idFilms].name_director);
-  
   //que pelicula va impirmir por cada director
   //este recorre toda la data
   allData.forEach(film => {
@@ -153,9 +149,6 @@ directors.addEventListener("change", function() {
   container.innerHTML = html;
  
 });
-
-
-
 
 clearSelect();
 fillSelect();
